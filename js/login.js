@@ -5,7 +5,6 @@ function login() {
     // Extraer la parte después del "@" del nombre de usuario
     var domain = usuario.split('@')[1];
 
-    // Lógica para determinar el rol basado en el dominio
     switch (domain) {
         case 'admin.com':
             if (contrasena === 'admin') {
