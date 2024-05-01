@@ -7,7 +7,7 @@ function onRequestHandler(){
         const data = JSON.parse(this.response);
         
         const dolarValor = data.dolar.valor; 
-        const items = document.querySelectorAll("#u");//No se me ocurrio nada creativo sjdfjsdj
+        const items = document.querySelectorAll("#u");//No se me ocurrio nada creativo sjdfjsdjfdfsg
 
         items.forEach(item => {
             const precioItem = item.querySelector("#i");
