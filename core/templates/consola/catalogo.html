@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'consola/css/carrito/carro.css' %}">
+    <link href="{% static 'consola/css/style1.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'consola/Imagenes/logo.jpg' %}"/>
+    <script type="module" src="{% static 'consola/js/api.js' %}"></script>
+    <script src="{% static 'consola/js/carro.js'  %}" async></script>
+    <title>Ferremas | Catalogo</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo" style="color: black;">FERREMAS</h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="{% url 'archivo' %}">Inicio</a>
+            <a href="#">Ajustes</a>
+            <a href="{% url 'login' %}">Inicio sesión</a>
+        </nav>
+    </div>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div id="u"class="item">
+                <span class="titulo-item">Tornillos</span>
+                <img src="{% static 'consola/Imagenes/productos/1.jpg' %}" alt="" class="img-item">
+                <h5>Pesos Chilenos: </h5><span  id="i" class="precio-item">$2.000</span>
+                <h5>Pesos USD: </h5><span id="i" class="precio-item">$2.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div id="u" class="item">
+                <span class="titulo-item">English Horse</span>
+                <img src="{% static 'consola/Imagenes/productos/2.png' %}" alt="" class="img-item">
+                <h5>Pesos Chilenos: </h5><span class="precio-item">$25.000</span>
+                <h5>Pesos USD: </h5><span id="i" class="precio-item">$25.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div id="u" class="item">
+                <span class="titulo-item">Alicate Universal 200mm</span>
+                <img src="{% static 'consola/Imagenes/productos/3.jpg' %}" alt="" class="img-item">
+                <h5>Pesos Chilenos: </h5><span class="precio-item">$5.000</span>
+                <h5>Pesos USD: </h5><span id="i" class="precio-item">$5.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Clavo Corriente Inchalam 2 1/2" </span>
+                <img src="{% static 'consola/Imagenes/productos/4.jpeg' %}" alt="" class="img-item">
+                <h5>Pesos Chilenos: </h5><span class="precio-item">$8.000</span>
+                <h5>Pesos USD: </h5><span id="i"class="precio-item">$8.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div id="u" class="item">
+                <span class="titulo-item">Taladro Percutor Dewalt 20V</span>
+                <img src="{% static 'consola/Imagenes/productos/5.jpg' %}" alt="" class="img-item">
+                <h5>Pesos Chilenos: </h5><span class="precio-item">$132.000</span>
+                <h5>Pesos USD: </h5><span id="i" class="precio-item">$132.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>            
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
