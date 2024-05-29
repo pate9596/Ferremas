@@ -14,6 +14,6 @@ urlpatterns = [
      path('vendedor/',views.vendedor,name="vendedor"),
      path('administrador/',views.admin,name="admin"),
      path('api/',include(router.urls)),
-     path('initiate_payment/', views.initiate_payment, name='initiate_payment'),
-     path('payment_confirm/', views.payment_confirm, name='payment_confirm'),
+     path('iniciar_pago/', views.iniciar_pago, name='iniciar_pago'),
+     path('pago_confirmado/', views.pago_confirmado, name='pago_confirmado'),
 ]#Xd

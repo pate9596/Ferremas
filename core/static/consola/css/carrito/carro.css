@@ -103,11 +103,13 @@ img{
     align-items: center;
     padding: 20px 0;
     gap: 20px;
+    
 }
 
 .cart-total h3{
     font-size: 20px;
     font-weight: 700;
+    margin-right: auto;
 }
 
 .total-pagar{
@@ -192,4 +194,15 @@ img{
 
 .hidden{
     display: none;
+}
+.botn{
+    width: 3rem; 
+    height: 2rem;
+    border-radius: 5rem;
+    background-color: #78c419;
+    display: block;
+    margin: 0 auto;
+    color: azure;
+    line-height: 3rem;
+    text-align: center;
 }

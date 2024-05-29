@@ -1,0 +1,24 @@
+img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.btn{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 5rem;
+    background-color: #78c419;
+    display: block;
+    margin: 0 auto;
+    color: rgb(255, 255, 255) ;
+    line-height: 3rem;
+    text-align: center;
+    text-decoration: none;
+}
+.musica{
+    border-radius:12px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+}

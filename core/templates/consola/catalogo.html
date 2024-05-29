@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'consola/css/carrito/carro.css' %}">
    <link href="{% static 'consola/css/style2.css' %}" rel="stylesheet"> 
@@ -75,13 +76,13 @@
                 <h3>Total:</h3>
                 
                 <span class="total-pagar">$200</span>
-                <a href="{% url 'initiate_payment' %}">Pagar</a>
+                <a href="{% url 'iniciar_pago' %}" class="btn">Pagar</a>
             </div>
             <p class="cart-empty">El carrito está vacío</p>
         </div>
     </div>
 </header>
-<button id="cambiarMoneda" onclick="cambiarMoneda()">cambiar a usd</button>
+ <!-- <button id="cambiarMoneda" onclick="cambiarMoneda()">cambiar a usd</button>-->
 <div class="container-items">
     <div class="item" id="u">
         <figure>

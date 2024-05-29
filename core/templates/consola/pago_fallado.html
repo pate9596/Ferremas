@@ -1,0 +1,30 @@
+<!-- templates/payment_failure.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ferremas | Fallo el pago</title>
+    <link href="{% static 'consola/css/style2.css' %}" rel="stylesheet">
+    <link href="{% static 'consola/css/Pago/pago_realizado.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'consola/Imagenes/logo.jpg' %}"/>
+</head>
+<body>
+    <header>
+        <h1 class="titulo" style="color: black;">FERREMAS</h1>
+       </header>
+   
+       <div class="nav-bg">
+           <nav class="navegacion-principal contenedor">
+               <a href="{% url 'login' %}">Inicio sesión</a>
+               <a href="{% url 'archivo' %}">Inicio</a>
+               <a href="#">Ajustes</a>
+           </nav>
+       </div>
+       <h1>Fallo el pago</h1>
+       <div class="img">
+            <img src="{% static 'consola/Imagenes/pago02.png' %}"  alt="">
+        </div>
+    <p>Error Details: {{ response }}</p>
+    <iframe class="musica" style="border-radius:12px" src="https://open.spotify.com/embed/track/73CKjW3vsUXRpy3NnX4H7F?utm_source=generator&theme=0" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</body>
+</html>

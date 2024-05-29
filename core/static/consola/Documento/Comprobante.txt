@@ -1,0 +1,12 @@
+Transaction Details:
+{'vci': 'TSY', 
+'amount': 1000, 
+'status': 'AUTHORIZED',
+ 'buy_order': 'order123456789', 
+'session_id': 'session123456', 
+'card_detail': {'card_number': '6623'}, 
+		'accounting_date': '0527',
+		'transaction_date': '2024-05-27T14:37:17.301Z', 			'authorization_code': '1213', 
+		'payment_type_code': 'VD', 
+		'response_code': 0, 
+		'installments_number': 0}

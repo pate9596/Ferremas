@@ -1,0 +1,33 @@
+<!-- templates/payment_success.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ferremas | Pago Realizado</title>
+    <link href="{% static 'consola/css/style2.css' %}" rel="stylesheet">
+    <link href="{% static 'consola/css/Pago/pago_realizado.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'consola/Imagenes/logo.jpg' %}"/>
+</head>
+<body>
+    <header>
+        <h1 class="titulo" style="color: black;">FERREMAS</h1>
+       </header>
+   
+       <div class="nav-bg">
+           <nav class="navegacion-principal contenedor">
+               <a href="{% url 'login' %}">Inicio sesión</a>
+               <a href="{% url 'archivo' %}">Inicio</a>
+               <a href="#">Ajustes</a>
+           </nav>
+       </div>
+    <h1>!!Pago Realizado con exito!!</h1>
+    <h2>!!Muchas Gracias por su compra!!</h2>
+    <div class="img">
+        <img src="{% static 'consola/Imagenes/Pago01.png' %}"  alt="">
+    </div>
+        <a href="{% static 'consola/Documento/Comprobante.txt' %}" download="comprobante.txt" class="btn">Descargar Recibo</a>
+       
+   
+    <iframe class="musica" src="https://open.spotify.com/embed/track/0GjEhVFGZW8afUYGChu3Rr?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</body>
+</html>

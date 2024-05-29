@@ -5,23 +5,23 @@
     --secundario: #5d7c80;
     --gris: #757575;
     --grisClaro: #DFE9F3;
-}
-.servicios,
-.navegacion-principal,
-.formulario {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
 
+}
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+html {
+    font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+    
+}
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+    background-image: linear-gradient(to top, var(--grisClaro) 30%, var(--blanco) 100% );
 }
+
+
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
@@ -59,12 +59,16 @@ body {
 
 h1,h2,h3 {
     text-align: center ;
+
 }
 
 /* Titulos */
-header{
-    text-align: center ;
+.titulo {
+    font-size: 5rem;
+    text-align: center 
 }
+
+
 /** Utilidades **/
 .w-sm-100 {
     width: 100%;
@@ -110,4 +114,15 @@ header{
     color: var(--oscuro);
 }
 
-
+.btn{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 5rem;
+    background-color: #78c419;
+    display: block;
+    margin: 0 auto;
+    color: rgb(226, 255, 255);
+    line-height: 3rem;
+    text-align: center;
+    text-decoration: none;
+}
