@@ -99,6 +99,17 @@ h1,h2,h3 {
         justify-content: space-between;
     }
 }
+.navegacion-principal button{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    background-color: var(--secundario);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    border: none;
+}
 
 .navegacion-principal a {
     display: block;
@@ -109,7 +120,7 @@ h1,h2,h3 {
     font-weight: 700;
     padding: 1rem;
 }
-.navegacion-principal a:hover {
+.navegacion-principal a:hover , button:hover{
     background-color: var(--primario);
     color: var(--oscuro);
 }

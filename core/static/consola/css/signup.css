@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-h3{
-  text-align: center;
-}
-
   
   body {
     font-family: arial;
@@ -15,20 +11,24 @@ h3{
     /* Esto asegura que el fondo se muestre completamente */
     background-repeat: no-repeat;
   }
+  h3{
+    text-align: center;
+  }
   
-  .container, .form-login {
-    width: 400px;
-    height: 340px;
+  
+  .container {
+    width: 800px;
+    height: 520px;
     background: #947a7a;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 3rem;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
     border-top: 4px solid #7f9aa5;
     color: white;
   }
   
-  .form-control h5 h3{
+  .form-control h5 {
     margin: 0;
     text-align: center;
     height: 40px;
@@ -37,7 +37,7 @@ h3{
     font-size: 20px;
   }
   
-  .controls {
+#id_username, #id_email, #id_password1, #id_password2{
     width: 100%;
     border: 1px solid #017bab;
     margin-bottom: 15px;
@@ -65,13 +65,13 @@ h3{
     border-bottom: 1px solid;
   }
   
-  .form-login a {
+  li {
     color: white;
     text-decoration: none;
     font-size: 14px;
   }
   
-  .form-login a:hover {
+ li:hover {
     text-decoration: underline;
   }
 

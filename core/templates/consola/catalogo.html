@@ -20,7 +20,15 @@
 
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
+            {% if not request.user.is_authenticated %}
             <a href="{% url 'login' %}">Inicio sesión</a>
+            {% else %}
+                <a>{{ user.username}} </a>
+                <form id="logout-form" method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" href="{% url 'logout' %}">salir</button>
+                </form>
+            {% endif %}
             <a href="{% url 'archivo' %}">Inicio</a>
             <a href="#">Ajustes</a>
         </nav>

@@ -1,10 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/vendedorS/StyleV.css">
-    <title>Document</title>
+    <link href="{% static 'consola/css/vendedorS/StyleV.css' %}" rel="stylesheet">
+    <title>Productos en Bodega</title>
 </head>
 <body>
     <header>
@@ -18,6 +18,41 @@
             <a href="OrdeV.html">Ordenes</a>
         </nav>
     </div>
-    <h2>En proceso</h2>
+    <h1>Lista de Artículos</h1>
+    <div id="articulos"></div>
+
+    <script>
+        // URL de la API
+        const apiUrl = 'http://127.0.0.1:8000/%2Fapi/Producto/';
+
+        // Función para llamar a la API y procesar los datos
+        async function fetchArticulos() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud: ' + response.status);
+                }
+                const data = await response.json();
+                mostrarArticulos(data);
+            } catch (error) {
+                console.error('Error al obtener los artículos:', error);
+            }
+        }
+
+        // Función para mostrar los artículos en el HTML
+        function mostrarArticulos(articulos) {
+            const articulosDiv = document.getElementById('articulos');
+            articulosDiv.innerHTML = ''; // Limpiar cualquier contenido previo
+
+            articulos.forEach(articulo => {
+                const articuloElement = document.createElement('div');
+                articuloElement.textContent = `Título: ${articulo.Codigo}, Descripción: ${articulo.Nombre_Producto}`;
+                articulosDiv.appendChild(articuloElement);
+            });
+        }
+
+        // Llamar a la función para obtener y mostrar los artículos
+        fetchArticulos();
+    </script>
 </body>
 </html>

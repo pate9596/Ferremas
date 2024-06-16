@@ -15,20 +15,24 @@ def home(request):
 def catag(request): 
     return render(request, "consola/catalogo.html")
 
-def login(request): 
-    return render(request, "consola/account.html")
 
 def contador(request): 
     return render(request, "consola/Contador/cont.html")
 
 def bodeguero(request): 
     return render(request, "consola/Bodeguero/Bode.html")
+def bodegp(request): 
+    return render(request, "consola/Vendedor/BodePr.html")
+
 
 def vendedor(request): 
     return render(request, "consola/Vendedor/vende.html")
 
 def admin(request): 
     return render(request, "consola/Administrador/Adm.html")
+
+def regis(request):
+    return render(request, "consola/Registrase/Registrar.html")
 
 
 
